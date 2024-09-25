@@ -10,6 +10,7 @@ const params = {
 
 axios.get(url,params).then(response=>{
     const data = response.data;
+    console.log(data);
     const totalArticles = data.total_hits;
     if(totalArticles>page_size){
         const pages = Math.ceil(totalArticles/page_size);
